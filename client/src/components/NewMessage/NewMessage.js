@@ -5,7 +5,11 @@ class NewMessage extends React.Component {
     return (
 
 <div className="subject-container">
-        <h4 className="subject-heading">Login or Sign up to continue.</h4>
+        <h4 className="subject-heading">
+          <a href="/login">Login </a>
+          or
+          <a href="/signup"> Sign up </a>
+           to continue.</h4>
 </div>
 
     )}};

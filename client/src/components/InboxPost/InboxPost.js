@@ -7,7 +7,7 @@ class Post extends React.Component {
   //unable to get all replies to show up
 
  /* getReplies(){
-    console.log(this.props.replies)
+    //console.log(this.props.replies)
   } */
 //{props.replies[0].replyContent} 
 

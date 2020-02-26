@@ -13,7 +13,7 @@ subject: this.props.match.params.subject
   }
 
     checkForUser = () => {
-        console.log("checkForUser")
+        //console.log("checkForUser")
         API.findCookie()
       .then(res => {
         this.setState({
@@ -25,12 +25,12 @@ subject: this.props.match.params.subject
       }
     
       getSubjectPosts = () => {
-        console.log("checkForPosts")
+        //console.log("checkForPosts")
         API.getSubjectPosts({
           subject: this.state.subject
         })
       .then(res => {
-          console.log(res)
+          //console.log(res)
         this.setState({
           data: res
         });
@@ -39,7 +39,7 @@ subject: this.props.match.params.subject
       }
 
       refreshPage(){
-        console.log("hey")
+        //console.log("hey")
         window.location.reload(true);
       }
     
@@ -58,7 +58,8 @@ subject: this.props.match.params.subject
             
             <MessageBoard
             data = {this.state.data}
-            userName = {this.state.returnedName}>
+            userName = {this.state.returnedName}
+            refreshPage={this.refreshPage}>
             </MessageBoard>
             
             </div>

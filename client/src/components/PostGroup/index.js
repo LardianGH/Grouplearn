@@ -19,9 +19,9 @@ event.preventDefault()
 const form = this.state
 
 if (form.location && form.content) { //if all 3 areas are filled out, run this
-    console.log(form.subject) //log them
-    console.log(form.location)
-    console.log(form.content)
+    //console.log(form.subject) //log them
+    //console.log(form.location)
+    //console.log(form.content)
     API.saveGroup({ //call saveGroup from ../utils/API
       subject: this.props.subject, //insert the 3 data areas plus the user to saveGroup
       location: form.location,

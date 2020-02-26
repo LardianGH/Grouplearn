@@ -17,16 +17,16 @@ event.preventDefault()
 const form = this.state
 
 if (form.userName && form.password && form.email) { //if all 3 areas are filled out, run this
-    console.log(form.userName) //log them
-    console.log(form.password)
-    console.log(form.email)
+    //console.log(form.userName) //log them
+    //console.log(form.password)
+    //console.log(form.email)
     API.saveUser({ //call saveUser from ../utils/API
       userName: form.userName, //insert the 3 data areas to saveUser
       password: form.password,
       email: form.email,
     })
       .then(res => {
-        console.log(res)
+        //console.log(res)
 if (res.data != false) {
       this.props.SendBack()
 } else {

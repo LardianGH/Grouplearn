@@ -106,7 +106,7 @@ db.Study
   .remove({})
   .then(() => db.Study.collection.insertMany(studieseed))
   .then(data => {
-    console.log(data.result.n + " records inserted!");
+    //console.log(data.result.n + " records inserted!");
     process.exit(0);
   })
   .catch(err => {

@@ -7,7 +7,7 @@ if(req.session.userName) {
     res.json(req.session)
 }
 else {
-  console.log("no username saved")
+  //console.log("no username saved")
 }
   },
   create: function(req, res) {
@@ -17,7 +17,7 @@ else {
       .catch(err => res.status(422).json(err));
   },
   findAllPosts: function(req, res) {
-    console.log("findAllPosts")
+    //console.log("findAllPosts")
     db.Study
     .find({})
     .sort({ date: -1 })
@@ -25,8 +25,8 @@ else {
     .catch(err => res.status(422).json(err));
   },
   findSubjectPosts: function(req, res) {
-    console.log("findPosts")
-    console.log(req.body.params.q.subject)
+    //console.log("findPosts")
+    //console.log(req.body.params.q.subject)
     db.Study
     .find({subject: req.body.params.q.subject})
     .sort({ date: -1 })
@@ -34,7 +34,7 @@ else {
     .catch(err => res.status(422).json(err));
   },
   createReply: function(req, res) {
-    console.log(req.body)
+    //console.log(req.body)
     db.Study
     .findOneAndUpdate({_id: req.body.id}, 
     {$push: {replies: {userName: req.body.userName, replyContent: req.body.replyContent}}},
@@ -46,7 +46,7 @@ else {
     .catch(err => res.status(422).json(err));
   },
   findYourReplies: function(req, res) {
-    console.log(req.body.userName)
+    //console.log(req.body.userName)
     db.Study
     .find({user: {userName: req.body.userName, email: req.body.email}})
     .sort({ date: -1 })
@@ -54,9 +54,9 @@ else {
     .catch(err => res.status(422).json(err));
   },
    findUser: function(req, res) {
-    console.log("Session: ___l")
+    //console.log("Session: ___l")
     const response = {session: req.session}
-    console.log(req.body)
+    //console.log(req.body)
     db.User
       .find({userName: req.body.params.q.userName, password: req.body.params.q.password})
       .sort({ date: -1 })
@@ -75,8 +75,8 @@ else {
       .catch(err => res.status(422).json(err));
   },
   createUser: function(req, res) {
-    console.log("Session: ___c")
-    console.log(req)
+    //console.log("Session: ___c")
+    //console.log(req)
     db.User.find({
         userName: req.body.userName
     }).then(function(results) {

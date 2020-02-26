@@ -10,7 +10,7 @@ class FrontPage extends Component { //main is a test page to test user creation 
     }
 
     checkForUser = () => {
-        console.log("checkForUser")
+        //console.log("checkForUser")
         API.findCookie()
       .then(res => {
         this.setState({

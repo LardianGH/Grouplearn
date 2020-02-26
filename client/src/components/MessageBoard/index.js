@@ -10,7 +10,7 @@ class MessageBoard extends React.Component {
 
   handleInputChange = event => { //Allows the textboxes to be used.
     const { name, value } = event.target;
-    console.log(name)
+    //console.log(name)
     this.setState({
       [name]: value
     });
@@ -18,13 +18,13 @@ class MessageBoard extends React.Component {
 
   submitReply = (event, id) => { //whenever the form is submitted
     event.preventDefault()
-    console.log(this.state[id])
+    //console.log(this.state[id])
 let replyContent = this.state[id]
 let userName = this.props.userName
 
         API.submitReply({id, userName, replyContent})
           .then(res => {
-            console.log(res.data)
+           this.props.refreshPage()
           })
           .catch(err => console.log(err));
         

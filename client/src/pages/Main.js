@@ -15,13 +15,13 @@ class Main extends Component { //main is a test page to test user creation (Work
 
 event.preventDefault()
 if (userName && password) { //if all 2 areas are filled out, run this
-    console.log("posted") //log them
+    //console.log("posted") //log them
     API.getUser({ //call getUser from ../utils/API
       userName, //insert the 2 data areas to getUser
       password,
     })
       .then(res => {
-        console.log(res.data)
+        //console.log(res.data)
         this.setState({
           returnedName: res.data.dbModel[0].userName,
           returnedEmail: res.data.dbModel[0].email
@@ -33,7 +33,7 @@ if (userName && password) { //if all 2 areas are filled out, run this
 };
 
 checkForUser = () => {
-  console.log("checkForUser")
+  //console.log("checkForUser")
   API.findCookie()
 .then(res => {
   this.setState({

@@ -12,12 +12,12 @@ export default {
     return axios.post("/api/studies/reply", replyData);
   },
   getReplies: function(inboxData) {
-    console.log(inboxData)
+    //console.log(inboxData)
     return axios.post("/api/studies/inbox", inboxData);
   },
   //searches for a user matching the given info
   getUser: function(userData) {
-    console.log(userData)
+    //console.log(userData)
     return axios.post("/api/users/login", { params: { q: userData } });
   },
   getAll: function() {

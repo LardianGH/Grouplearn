@@ -46,7 +46,7 @@ render() {
                     onClick={e => this.props.handleSubmit(e, this.state.userName, this.state.password)} //when this button is clicked, it submits the form
                     className="ui big button">
                         <i className="signup icon"></i>
-                        Sign Up
+                        Log in
                     </button>
                 </div>
         </form>
